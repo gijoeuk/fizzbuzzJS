@@ -13,11 +13,12 @@ describe("Javabuzz", function() {
     });
 
     it("divisble by 5", function() {
-      expect(javabuzz.isDivisibleByFive(15)).toBe(true);
+      expect(javabuzz.isDivisibleByFive(5)).toBe(true);
     });
 
-    it("divisible by 10", function() {
-      expect(javabuzz.isDivisibleByTen(20)).toBe(true);
+
+    it("divisible by 15", function() {
+      expect(javabuzz.isDivisibleByFifteen(15)).toBe(true);
     });
 
   });
@@ -32,8 +33,24 @@ describe("Javabuzz", function() {
       expect(javabuzz.isDivisibleByFive(7)).toBe(false);
     });
 
-    it("divisible by 10", function() {
-      expect(javabuzz.isDivisibleByTen(15)).toBe(false);
+    it("divisible by 15", function() {
+      expect(javabuzz.isDivisibleByFifteen(30)).toBe(true);
+    });
+
+  });
+
+  describe("when playing, says", function() {
+
+    it ("Fizzes when a number is divisible by 3", function() {
+      expect(javabuzz.says(3)).toEqual("Java");
+    });
+
+    it ("Buzzes when a number is divisible by 5", function() {
+      expect(javabuzz.says(5)).toEqual("Buzz");
+    });
+
+    it ("Javabuzzes when a number is divisible by 15", function() {
+      expect(javabuzz.says(30)).toEqual("JavaBuzz");
     });
 
   });
